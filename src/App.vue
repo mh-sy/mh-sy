@@ -4,9 +4,36 @@
         <div class="header-wrap">
             <div class="logo-text">2buy2go</div>
             <div class="btn-wrap">
-                <button @click="likeDataShow()" class="btn">찜 목록</button>
-                <button @click="sortDataShow()" class="btn">가격순</button>
-                <button @click="originalItemDataShow()" class="btn">
+                <button
+                    v-if="nowTab.like === false"
+                    @click="likeDataShow()"
+                    class="btn"
+                >
+                    찜 목록
+                </button>
+                <button v-else @click="likeDataShow()" class="btn2">
+                    찜 목록
+                </button>
+
+                <button
+                    v-if="nowTab.sort === false"
+                    @click="sortDataShow()"
+                    class="btn"
+                >
+                    가격순
+                </button>
+                <button v-else @click="sortDataShow()" class="btn2">
+                    가격순
+                </button>
+
+                <button
+                    v-if="nowTab.original === false"
+                    @click="originalItemDataShow()"
+                    class="btn"
+                >
+                    전체보기
+                </button>
+                <button v-else @click="originalItemDataShow()" class="btn2">
                     전체보기
                 </button>
             </div>
@@ -71,7 +98,11 @@ export default {
             originalItemData: [...data],
             likeData: [],
 
-            nowTab: 0,
+            nowTab: {
+                like: false,
+                sort: false,
+                original: false,
+            },
         };
     },
     methods: {
@@ -86,17 +117,23 @@ export default {
         },
         likeDataShow() {
             this.itemData = this.itemData.filter((el) => el.like === true);
-            this.nowTab = 2;
+            this.nowTab.like = true;
+            this.nowTab.sort = false;
+            this.nowTab.original = false;
         },
         sortDataShow() {
             this.itemData = this.itemData.sort((a, b) =>
                 a.price > b.price ? 1 : -1
             );
-            this.nowTab = 1;
+            this.nowTab.like = false;
+            this.nowTab.sort = true;
+            this.nowTab.original = false;
         },
         originalItemDataShow() {
-            this.itemData = this.originalItemData;
-            this.nowTab = 0;
+            this.itemData = [...this.originalItemData];
+            this.nowTab.sort = false;
+            this.nowTab.like = false;
+            this.nowTab.original = true;
         },
     },
 };
