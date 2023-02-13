@@ -13,15 +13,42 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "EnjoyStories";
+    font-weight: 300;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/tvn/EnjoyStoriesLight.ttf")
+        format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: "EnjoyStories";
+    font-weight: 500;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/tvn/EnjoyStoriesMedium.ttf")
+        format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: "EnjoyStories";
+    font-weight: 700;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/tvn/EnjoyStoriesBold.ttf")
+        format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GangwonEdu_OTFBoldA";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     margin: 0px;
     box-sizing: border-box;
-
-    font-family: "GangwonEdu_OTFBoldA";
-    font-style: normal;
-
-    color: #323232;
 }
 
 body {
@@ -37,16 +64,171 @@ body {
 
 .img_wrap {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 .main_img {
-    /* width: 100vw; */
-    height: 100vh;
+    width: 100%;
+    content: url(./images/main_img.gif);
+}
 
-    content: url(./images/main_img.jpg);
+.introduce_wrap {
+    width: 100%;
+    height: 100%;
 
-    display: block;
-    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* 
+    background-image: url(./images/background.jpg);
+    background-size: 100% 100vh; */
+    position: relative;
+}
+
+.background_img {
+    width: 100%;
+    content: url(./images/background.jpg);
+}
+
+.introduce_text_wrap {
+    position: absolute;
+    font-family: "EnjoyStories";
+    padding: 40px 15px 0px 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.introduce_text_wrap > span {
+    margin-bottom: 10px;
+}
+
+.introduce_text_wrap > span:nth-of-type(2) {
+    font-size: 25px;
+    font-weight: 300;
+}
+.introduce_text_wrap > span:nth-of-type(4) {
+    font-size: 25px;
+    font-weight: 300;
+}
+.introduce_text_wrap > span:nth-of-type(6) {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.profile_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    padding: 0px 20px;
+}
+
+.job {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.name {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.father_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user_img1 {
+    width: 50px;
+    height: 50px;
+
+    /* background-color: #e1e1e1; */
+
+    content: url(./images/father.png);
+}
+
+.user_img2 {
+    width: 50px;
+    height: 50px;
+
+    /* background-color: #e1e1e1; */
+
+    content: url(./images/mother.png);
+}
+
+.gift {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.calendar {
+    width: 100%;
+
+    content: url(./images/calendar.png);
+}
+
+.gallery_wrap {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+
+.gallery_img {
+    width: 100%;
+    content: url(./images/gallery.png);
+}
+
+.gallery_button {
+    width: 10vh;
+    height: 10vh;
+
+    content: url(./images/more_button.png);
+    position: absolute;
+
+    bottom: 7.5%;
+    right: 20%;
+
+    cursor: pointer;
+}
+
+.map_img {
+    padding-top: 50px;
+
+    width: 80%;
+    content: url(./images/map.jpg);
+    position: absolute;
+}
+
+.map_wrap {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
+
+.background_img2 {
+    width: 100%;
+    height: 70%;
+    content: url(./images/background2.png);
 }
