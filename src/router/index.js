@@ -5,10 +5,12 @@ import Gallery from "../components/Gallery.vue";
 const routes = [
     {
         path: "/",
+        name: Main,
         component: Main,
     },
     {
         path: "/gallery",
+        name: Gallery,
         component: Gallery,
     },
 ];

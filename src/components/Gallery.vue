@@ -1,5 +1,5 @@
 <template>
-    <div class="page_wrap"></div>
+    <div>여긴 갤러리</div>
 </template>
 
 <script>
