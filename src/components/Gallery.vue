@@ -1,5 +1,5 @@
 <template>
-    <div>여긴 갤러리</div>
+    <div>민형소련 갤러리</div>
 </template>
 
 <script>

@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Main from "../components/Main.vue";
 import Gallery from "../components/Gallery.vue";
+import KaKaoMap from "../components/KaKaoMap.vue";
 
 const routes = [
     {
@@ -12,6 +13,10 @@ const routes = [
         path: "/gallery",
         name: Gallery,
         component: Gallery,
+    },
+    {
+        path: "/kakaomap",
+        component: KaKaoMap,
     },
 ];
 
