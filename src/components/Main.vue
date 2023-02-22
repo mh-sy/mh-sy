@@ -1,5 +1,6 @@
 <template>
-    <div @click="$router.push('/gallery')">여긴 메인</div>
+    <div></div>
+    <!-- <div @click="$router.push('/gallery')">여긴 메인</div> -->
 </template>
 
 <script>
