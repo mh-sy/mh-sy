@@ -1,11 +1,12 @@
 <template>
+    <span class="top_text">Gallery</span>
     <Carousel
         id="gallery"
         :items-to-show="1"
         :wrap-around="false"
         v-model="currentSlide"
     >
-        <Slide v-for="(slide, index) in 16" :key="index">
+        <Slide v-for="(slide, index) in 13" :key="index">
             <div class="carousel__item">
                 <!-- {{ index + 1 }} -->
                 <img class="photo" :src="imgArr[index]?.url" />
@@ -20,7 +21,7 @@
         v-model="currentSlide"
         ref="carousel"
     >
-        <Slide v-for="(slide, index) in 16" :key="index">
+        <Slide v-for="(slide, index) in 13" :key="index">
             <div class="carousel__item" @click="slideTo(slide - 1)">
                 <img class="photo" :src="imgArr[index]?.url" />
             </div>
@@ -83,15 +84,6 @@ export default defineComponent({
             {
                 url: require("@/assets/images/13.jpg"),
             },
-            {
-                url: require("@/assets/images/14.jpg"),
-            },
-            {
-                url: require("@/assets/images/15.jpg"),
-            },
-            {
-                url: require("@/assets/images/16.jpg"),
-            },
         ],
     }),
     methods: {
@@ -104,12 +96,12 @@ export default defineComponent({
 
 <style>
 #gallery .carousel__item {
-    height: 80vh;
+    max-height: 80%;
 }
 
 .carousel__item {
     width: 100%;
-    min-height: 20vh;
+    max-height: 20%;
     /* background-color: var(--vp-c-green); */
     color: #000;
     font-size: 20px;
@@ -121,5 +113,11 @@ export default defineComponent({
 
 .photo {
     width: 100%;
+}
+
+.top_text {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-align: center;
 }
 </style>

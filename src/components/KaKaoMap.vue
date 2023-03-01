@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1>민형쿤 소련쿤 결혼식</h1>
         <div id="map"></div>
     </div>
 </template>
@@ -83,7 +82,7 @@ export default {
 
 <style scoped>
 #map {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 30vh;
 }
 </style>
